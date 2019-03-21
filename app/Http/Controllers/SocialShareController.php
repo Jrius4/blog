@@ -8,8 +8,11 @@ class SocialShareController extends Controller
 {
     //
 public function share($id){
-    $result="hello";
-    return view('posts.show',['data_array'=>$result]);
+    $dataz=array(
+        'result'=>"hello",
+        'data'=>45
+    );
+    return view('posts.show',['data_array'=>$dataz]);
 }
 
 }
