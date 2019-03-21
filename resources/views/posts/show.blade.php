@@ -2,7 +2,7 @@
 
 @section('content')
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=2326205684328396&autoLogAppEvents=1"></script>
+
 <a href="/posts" class="btn btn-warning m-2" role="button">Go Back</a>
 <h1>{{$post->title}}</h1>
 
