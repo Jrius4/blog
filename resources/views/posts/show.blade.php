@@ -94,5 +94,12 @@
           });
         }
         </script>
+
+
+
+
+
+<hr>
+<a href="javascript:void(0);" onclick="fb_share('{{ $url }}', '{{ $data->newstitle }}')" class="fbBtm">facebook </a>
 </div>
 @endsection 
