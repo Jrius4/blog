@@ -17,6 +17,8 @@
 <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
 <hr/>
 <div class="fb-share-button" data-href="http://ndebitech-blog.herokuapp.com/posts/5" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fndebitech-blog.herokuapp.com%2Fposts%2F5&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+<br>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 @if(!Auth::guest())
 @if(Auth::user()->id == $post->user_id)
 
