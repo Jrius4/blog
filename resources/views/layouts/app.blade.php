@@ -25,7 +25,7 @@
 
 <body>
     <div id="app">
-        @include('inc.header')
+        @include('inc.navbar')
        
         <div>
             @include('inc.messages')
