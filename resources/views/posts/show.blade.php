@@ -130,13 +130,13 @@ return false;
 </script>
 
 <meta property="og:url"
-content="http://www.vadsangal.in/share/{{ $data_array->id }}" />
+content="http://www.vadsangal.in/share/{{ 58 }}" />
 <meta property="og:type"
 content="website" />
 <meta property="og:title"
-content="{{ $data_array->newstitle }}" />
-<meta property="og:description" content="{{ $data_array->newstext }}" />
+content="{{ 'news title' }}" />
+<meta property="og:description" content="{{ 'text body' }}" />
 <meta property="og:image"
-content="{{ asset('upload/news-event/'.$data_array->newsimage) }}" />
+content="{{ asset('upload/news-event/'.'image') }}" />
 </div>
 @endsection 
