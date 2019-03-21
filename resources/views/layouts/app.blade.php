@@ -12,7 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('/vendor/ckeditor/ckeditor/ckeditor.js') }}"></script>
+  
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -25,11 +25,7 @@
 
 <body>
     <div id="app">
-        @if($title=='Welcome to ndebitech Designs blog!')
-        @include('inc.header')        
-        @else
         @include('inc.navbar')
-        @endif
        
         <div>
             @include('inc.messages')
@@ -37,11 +33,7 @@
         </div>
     </div>
 
-     <script type="text/javascript">
-                // Replace the <textarea id="editor1"> with a CKEditor
-                // instance, using default configuration.
-                CKEDITOR.replace( 'article-ckeditor' );
-            </script>
+     
 
            
 
