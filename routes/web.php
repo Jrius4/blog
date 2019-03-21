@@ -35,3 +35,6 @@ Route::get('/about', 'PagesController@about');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
+//share on social media
+
+Route::get('/share/{id}','SocialShareController@share');

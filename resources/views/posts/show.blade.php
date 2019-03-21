@@ -100,6 +100,43 @@
 
 
 <hr>
-<a href="javascript:void(0);" onclick="fb_share('{{ $url }}', '{{ $data->newstitle }}')" class="fbBtm">facebook </a>
+@php($url=url('share/'.$data->id))
+
+<a href="javascript:void(0);" onclick="fb_share('{{ $url }}', '{{ $data->newstitle }}')" class="fbBtm">facebook </a>`
+<div id="fb-root"></div>
+<script>
+(function (d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id))
+return;
+js = d.createElement(s);
+js.id = id;
+js.src =
+"//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3&appId=2326205684328396";
+fjs.parentNode.insertBefore(js, fjs);
+}
+(document, 'script', 'facebook-jssdk'));
+function fb_share(dynamic_link,dynamic_title) {
+var app_id = '2326205684328396';
+var pageURL="https://www.facebook.com/dialog/feed?app_id=" + app_id + "&link=" +
+dynamic_link;
+var w = 600;
+var h = 400;
+var left = (screen.width / 2) - (w / 2);
+var top = (screen.height / 2) - (h / 2);
+window.open(pageURL, dynamic_title, 'toolbar=no, location=no, directories=no,status=no, menubar=yes, scrollbars=no, resizable=no, copyhistory=no, width=' + 800 + ',height=' + 650 + ', top=' + top + ', left=' + left)
+return false;
+}
+</script>
+
+<meta property="og:url"
+content="http://www.vadsangal.in/share/{{ $data_array->id }}" />
+<meta property="og:type"
+content="website" />
+<meta property="og:title"
+content="{{ $data_array->newstitle }}" />
+<meta property="og:description" content="{{ $data_array->newstext }}" />
+<meta property="og:image"
+content="{{ asset('upload/news-event/'.$data_array->newsimage) }}" />
 </div>
 @endsection 
