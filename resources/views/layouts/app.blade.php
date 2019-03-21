@@ -12,7 +12,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=2326205684328396&autoLogAppEvents=1"></script>
     
   
 
@@ -26,6 +25,24 @@
 </head>
 
 <body>
+        <script>
+                window.fbAsyncInit = function() {
+                  FB.init({
+                    appId      : '2326205684328396',
+                    xfbml      : true,
+                    version    : 'v3.2'
+                  });
+                  FB.AppEvents.logPageView();
+                };
+              
+                (function(d, s, id){
+                   var js, fjs = d.getElementsByTagName(s)[0];
+                   if (d.getElementById(id)) {return;}
+                   js = d.createElement(s); js.id = id;
+                   js.src = "https://connect.facebook.net/en_US/sdk.js";
+                   fjs.parentNode.insertBefore(js, fjs);
+                 }(document, 'script', 'facebook-jssdk'));
+              </script>
     <div id="app">
         @include('inc.navbar')
        
