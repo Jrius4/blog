@@ -100,9 +100,9 @@
 
 
 <hr>
-@php($url=url('share/'.$data->id))
+@php($url=url('share/'.'56'))
 
-<a href="javascript:void(0);" onclick="fb_share('{{ $url }}', '{{ $data->newstitle }}')" class="fbBtm">facebook </a>`
+<a href="javascript:void(0);" onclick="fb_share('{{ $url }}', '{{ 'news letters' }}')" class="fbBtm">facebook </a>`
 <div id="fb-root"></div>
 <script>
 (function (d, s, id) {
