@@ -9,7 +9,7 @@
                     <a class="btn btn-outline-danger" href="#">Read More &raquo;</a>
                     </div>
                     <div class="col-md-4 m-2 align-self-center ml-auto w-100">
-                    <img class="w-100 h-50" src="{{asset('storage/cover_images/girl404.jpg')}}"/>
+                    <img class="w-100 h-50" src="{{asset('images/girl404.jpg')}}"/>
                     </div>
         </div>
 

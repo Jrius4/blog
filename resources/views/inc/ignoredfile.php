@@ -122,3 +122,22 @@ document.getElementById('requestsBtn').onclick = function() {
 }
 </script>
 
+
+public function upload_video(Request $request){
+  $data=$request->all();
+  $rules=[
+    'video'=>'mimes:mpeg,oggo,mp4,webm,wmv,mov,3gp,mov,flv,avi,mmv,ts|max'
+    ]
+  $validator=Validator($data,$rules);
+  if($validator->fails()){
+    return redirect()
+    ->back()->withErrors($validator)->withInput();
+  }else{
+    $video=$data['video'];
+    $input=time().$video->getClientOrginalExtension();
+    $destinationPath='upload/videos';
+    $video->move($destinationPath,$input);
+    $user=video
+  }
+
+}
