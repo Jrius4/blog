@@ -2,58 +2,51 @@
     background-color: #2e0a0ace;
   
 }
-.blog-header{
-    background-image: linear-gradient(135deg,#a83737c0,#a837375b,#a837372d);
-    color: aliceblue;
-}
-/*
-.header-bg-img{
-    background-image: url(../storage/cover_images/penguins_brand.jpg);
-    background-position: center;
-}
-*/
-.sectio{
- position: relative;  
- width: 100%;
- height: 100vh;
-  display: flex;
-  align-items:center;
-  justify-content: center;
-  overflow: hidden;
-}
-.sectio h1{
-    text-align: center;
-    font-size: 6rem;
- 
-    padding: 20px;
-    margin: 15px;
-    z-index:1;
-    opacity:0.6;
-}
-.sectio p{
-    text-align: center;
-    font-size: 6rem;
- 
-    padding: 20px;
-    margin: 15px;
-    z-index:1;
-    opacity:0.6;
-}
-.video-container{
-    position: absolute;
-    top:0;
-    left:0;
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
     width: 100%;
-}
-.color-overlay{
+    overflow: hidden;
+  }
+  
+  header video {
     position: absolute;
-    top:0;
-    left:0;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    height: 100vh;
-    background-color: lightblue;
+    background-color: black;
     opacity: 0.5;
-}
-.blog-h{
-    color: crimson;
-}
+    z-index: 1;
+  }
+  
+  @media (pointer: coarse) and (hover: none) {
+    header {
+      background: url('http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg') black no-repeat center center scroll;
+    }
+    header video {
+      display: none;
+    }
+  }
